@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap styles
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Tab, Tabs } from 'react-bootstrap';
 
 import App from './App';
