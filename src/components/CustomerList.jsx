@@ -92,7 +92,7 @@ export default function Customerlist() {
                     setOpen(true);
                     fetchCustomers();
                 } else {
-                    alert("Something went wrong in addition: " + response.statusText);
+                    alert("Something went wrong in adding training: " + response.statusText);
                 }
             })
             .catch((err) => console.error(err));
@@ -113,28 +113,22 @@ export default function Customerlist() {
                 ],
             });
         } else {
-            console.error("Grid API is not available");
+            console.error("API error");
         }
     };
 
-    useEffect(() => {
-
-        if (gridRef.current && gridRef.current.api) {
-            exportToCSV();
-        }
-    }, []);
     return (<>
         <AddCustomer fetchCustomers={fetchCustomers} />
 
         <Button onClick={exportToCSV}>Export to CSV</Button>
-        <div className="ag-theme-material" style={{ width: "90%", height: 600 }}>
+        <div className="ag-theme-material" style={{ width: "100%", height: 550 }}>
             <h1>Customers</h1>
             <AgGridReact
                 rowData={customers}
                 columnDefs={columnDefs}
                 pagination={true}
                 paginationAutoPageSize={true}
-                ref={gridRef} // Attach the ref to the AgGridReact component
+                ref={gridRef}
             />
         </div>
         <Snackbar

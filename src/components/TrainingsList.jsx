@@ -57,9 +57,9 @@ function TrainingList() {
             const duration = Number(training.duration);
 
             if (stats[activity]) {
-                stats[activity] += duration; // Sum durations for the same activity
+                stats[activity] += duration;
             } else {
-                stats[activity] = duration; // Initialize if not present
+                stats[activity] = duration;
             }
         });
 
@@ -77,7 +77,7 @@ function TrainingList() {
             console.log(trainingsData);
             const trainingsWithCustomerName = trainingsData.map(training => ({
                 ...training,
-                customerName: `${training.customer?.firstname} ${training.customer?.lastname}` // Use optional chaining
+                customerName: `${training.customer?.firstname} ${training.customer?.lastname}`
             }));
             setTrainings(trainingsWithCustomerName);
         } catch (error) {
@@ -119,7 +119,7 @@ function TrainingList() {
         { headerName: "Date", field: "date", sortable: true, filter: true },
         { headerName: "Activity", field: "activity", sortable: true, filter: true },
         { headerName: "Duration", field: "duration", sortable: true, filter: true },
-        { headerName: "Customer Name", field: "customerName", sortable: true, filter: true }, // Add a column for customer name
+        { headerName: "Customer Name", field: "customerName", sortable: true, filter: true },
 
         {
             headerName: "Actions",
@@ -137,12 +137,12 @@ function TrainingList() {
     ]);
 
     return (
-        <div className="ag-theme-material" style={{ width: "90%", height: 600 }}>
+        <div className="ag-theme-material" style={{ width: "90%", height: 550 }}>
             <h1>Trainings</h1>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider', width: '100%' }}>
+            <Box sx={{ borderBottom: 1, borderColor: 'black', width: '100%' }}>
                 <Tabs value={tabIndex} onChange={handleTabChange} aria-label="training tabs">
-                    <Tab label="List View" />
-                    <Tab label="Calendar View" />
+                    <Tab label="All trainings" />
+                    <Tab label="Calendar" />
                     <Tab label="Charts" />
                 </Tabs>
             </Box>
@@ -164,7 +164,7 @@ function TrainingList() {
             </TabPanel>
             <Snackbar
                 open={openSnackbar}
-                autoHideDuration={6000}
+                autoHideDuration={7000}
                 onClose={handleCloseSnackbar}
                 message={snackbarMessage}
             />
