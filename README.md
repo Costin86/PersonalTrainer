@@ -1,8 +1,11 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Personal Trainer Front-End 
+Features: Retrieving data from API and list pages for "Customers" and "Trainings". 
+          Add, Edit, Delete Customer
+          Add, Delete Training
+          Export to CSV functionality
+          Calendar page where personal trainer can see all trainings (monthly, weekly, daily)
+          Statistics page where user can see the amount of minutes by different activities.
+          
+ 
