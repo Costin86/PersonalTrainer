@@ -1,7 +1,9 @@
 # React + Vite Personal Trainer Front-End 
 
 
-Features: Retrieving data from API and list pages for "Customers" and "Trainings".   
+Features: 
+
+          Retrieving data from API and list pages for "Customers" and "Trainings".   
 
           Add, Edit, Delete customer.   
           
